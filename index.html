@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kho tài nguyên làm phim miễn phí">
+  <title>Kho Tài Nguyên Làm Phim</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="logo">🎬 FILM<span>RESOURCE</span></div>
+      <a href="#categories">Danh mục</a>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">ANIMATION RESOURCE HUB</p>
+      <h1>Kho Tài Nguyên<br><span>Làm Phim</span></h1>
+      <p class="subtitle">Nhân vật, background, hiệu ứng, âm thanh và animation — tất cả được sắp xếp để bạn dễ tìm và tải về.</p>
+      <div class="search-box">
+        <span>🔍</span>
+        <input id="searchInput" type="search" placeholder="Tìm tài nguyên..." aria-label="Tìm tài nguyên">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="categories" class="section">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">BROWSE</p>
+          <h2>Danh mục</h2>
+        </div>
+      </div>
+      <div class="categories">
+        <button class="category active" data-category="all">✨ Tất cả</button>
+        <button class="category" data-category="character">🧍 Nhân vật</button>
+        <button class="category" data-category="background">🌄 Background</button>
+        <button class="category" data-category="effect">✨ Hiệu ứng</button>
+        <button class="category" data-category="audio">🔊 Âm thanh</button>
+        <button class="category" data-category="animation">🎞️ Animation</button>
+        <button class="category" data-category="project">📦 Project</button>
+      </div>
+    </section>
+
+    <section class="section resources-section">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">LIBRARY</p>
+          <h2>Tài nguyên mới</h2>
+        </div>
+        <span id="resultCount" class="count"></span>
+      </div>
+
+      <div id="resourceGrid" class="resource-grid">
+        <article class="resource-card" data-category="effect" data-search="fire effect lửa hiệu ứng png">
+          <div class="preview fire">🔥</div>
+          <div class="card-body">
+            <span class="tag">HIỆU ỨNG</span>
+            <h3>Fire Effect Pack</h3>
+            <p>20 PNG nền trong suốt, thích hợp cho animation.</p>
+            <div class="meta"><span>PNG</span><span>20 files</span></div>
+            <a class="download" href="downloads/fire-effect-pack.zip" download>⬇ Tải xuống</a>
+          </div>
+        </article>
+
+        <article class="resource-card" data-category="character" data-search="character nhân vật png anime">
+          <div class="preview character">🧍</div>
+          <div class="card-body">
+            <span class="tag">NHÂN VẬT</span>
+            <h3>Character Pack 01</h3>
+            <p>Bộ nhân vật PNG đã tách lớp để hỗ trợ animation.</p>
+            <div class="meta"><span>PNG</span><span>15 files</span></div>
+            <a class="download" href="downloads/character-pack-01.zip" download>⬇ Tải xuống</a>
+          </div>
+        </article>
+
+        <article class="resource-card" data-category="background" data-search="background thành phố city nền">
+          <div class="preview city">🏙️</div>
+          <div class="card-body">
+            <span class="tag">BACKGROUND</span>
+            <h3>City Background Pack</h3>
+            <p>Background thành phố dùng cho cảnh phim và animation.</p>
+            <div class="meta"><span>JPG/PNG</span><span>12 files</span></div>
+            <a class="download" href="downloads/city-background-pack.zip" download>⬇ Tải xuống</a>
+          </div>
+        </article>
+
+        <article class="resource-card" data-category="animation" data-search="animation frame chuyển động png">
+          <div class="preview animation">🎞️</div>
+          <div class="card-body">
+            <span class="tag">ANIMATION</span>
+            <h3>Movement Frames 01</h3>
+            <p>Frame PNG mẫu, mỗi ảnh thể hiện một chuyển động.</p>
+            <div class="meta"><span>PNG</span><span>20 files</span></div>
+            <a class="download" href="downloads/movement-frames-01.zip" download>⬇ Tải xuống</a>
+          </div>
+        </article>
+
+        <article class="resource-card" data-category="audio" data-search="sound effect âm thanh tiếng động">
+          <div class="preview audio">🔊</div>
+          <div class="card-body">
+            <span class="tag">ÂM THANH</span>
+            <h3>Sound Effects Pack</h3>
+            <p>Bộ âm thanh mẫu cho cảnh hành động và chuyển cảnh.</p>
+            <div class="meta"><span>MP3/WAV</span><span>25 files</span></div>
+            <a class="download" href="downloads/sound-effects-pack.zip" download>⬇ Tải xuống</a>
+          </div>
+        </article>
+
+        <article class="resource-card" data-category="project" data-search="dc2 project fla file dự án">
+          <div class="preview project">📦</div>
+          <div class="card-body">
+            <span class="tag">PROJECT</span>
+            <h3>Animation Project 01</h3>
+            <p>Project mẫu để tham khảo cách tổ chức tài nguyên.</p>
+            <div class="meta"><span>DC2/FLA</span><span>Project</span></div>
+            <a class="download" href="downloads/animation-project-01.zip" download>⬇ Tải xuống</a>
+          </div>
+        </article>
+      </div>
+
+      <div id="emptyState" class="empty" hidden>Không tìm thấy tài nguyên phù hợp.</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo">🎬 FILM<span>RESOURCE</span></div>
+    <p>Kho tài nguyên làm phim của cộng đồng.</p>
+    <small>© 2026 FilmResource</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
